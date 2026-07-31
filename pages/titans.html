@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Titan Registry — Attack on Titan Encyclopedia | 進撃の巨人</title>
+  <meta name="description" content="The complete Attack on Titan encyclopedia — all 9 Titan Shifters including the Founding Titan, Attack Titan, Colossal, Armored, Female, Beast, Jaw, Cart, and War Hammer Titans.">
+  <meta property="og:title" content="Complete Titan Registry — Attack on Titan Encyclopedia">
+  <meta property="og:description" content="All 9 Titan Shifters catalogued — abilities, inheritors, and lore from Hajime Isayama's masterpiece.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .titan-feature {
+      background: var(--color-ink);
+      border: 2px solid var(--color-military-3);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .titan-feature__art {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, var(--color-military-2), var(--color-black));
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      border: 1px solid var(--color-military-3);
+    }
+    .titan-feature__art::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-conic-gradient(rgba(0,0,0,0.08) 0.03%, transparent 0.04%) 50% 50% / 2px 2px;
+    }
+    .titan-feature__info h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--color-text);
+      letter-spacing: 2px;
+      margin-bottom: 0.2rem;
+    }
+    .titan-feature__jp {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      color: var(--color-blood);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .titan-feature__desc {
+      font-size: 0.85rem;
+      color: var(--color-text-dim);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .titan-feature__stat {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      color: var(--color-text-dim);
+      letter-spacing: 1.5px;
+    }
+    .titan-feature__stat strong {
+      color: var(--color-text);
+    }
+    @media (max-width: 640px) {
+      .titan-feature { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <nav class="nav" role="navigation" aria-label="Site navigation">
+    <div class="container">
+      <a href="../index.html">
+        <svg class="nav__emblem" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 8 L90 30 L90 70 L50 92 L10 70 L10 30 Z"/>
+          <path d="M50 22 L74 38 L74 62 L50 78 L26 62 L26 38 Z"/>
+          <line x1="50" y1="8" x2="50" y2="92"/>
+          <line x1="10" y1="30" x2="90" y2="30"/>
+          <line x1="10" y1="70" x2="90" y2="70"/>
+        </svg>
+      </a>
+      <ul class="nav__links">
+        <li><a href="../index.html" class="nav__link">Home</a></li>
+        <li><a href="chapters.html" class="nav__link">Chapters</a></li>
+        <li><a href="characters.html" class="nav__link">Characters</a></li>
+        <li><a href="titans.html" class="nav__link nav__link--active">Titans</a></li>
+        <li><a href="timeline.html" class="nav__link">Timeline</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="height:30vh;min-height:200px;background:linear-gradient(180deg,var(--color-black)0%,var(--color-military-1)100%);display:flex;align-items:center;justify-content:center;text-align:center">
+    <div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);color:var(--color-text);letter-spacing:6px;text-transform:uppercase">Titan Registry</h1>
+      <p style="font-family:var(--font-label);font-size:0.8rem;color:var(--color-text-dim);letter-spacing:4px;text-transform:uppercase;margin-top:0.5rem">The Nine — Powers That Shaped the World</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:2rem">
+    <div class="container">
+      <p style="text-align:center;color:var(--color-text-dim);font-size:0.9rem;margin-bottom:3rem;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7">
+        When Ymir Fritz died, her soul was divided into Nine. These Nine Titan powers have been passed down through the generations — each carrying a fragment of the Founder's strength, each bound by the curse of Ymir.
+      </p>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">始祖</span></div>
+        <div class="titan-feature__info">
+          <h2>The Founding Titan</h2>
+          <div class="titan-feature__jp">始祖の巨人</div>
+          <p class="titan-feature__desc">The first of all Titans. The Founding Titan commands the Coordinate — the power that binds every Subject of Ymir across time and space. It can control all Titans, alter the memories and biology of Eldians, and unleash the Rumbling. The power that built the Walls can also tear the world apart. Its will is the will of the Founder who wields it.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 13m+ (variable) · <strong>Abilities:</strong> Coordinate control, memory manipulation, Titan command, Rumbling · <strong>Notable Inheritors:</strong> Ymir Fritz, King Karl Fritz, Grisha Jaeger, Eren Jaeger</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">進撃</span></div>
+        <div class="titan-feature__info">
+          <h2>The Attack Titan</h2>
+          <div class="titan-feature__jp">進撃の巨人</div>
+          <p class="titan-feature__desc">A Titan defined by its relentless forward momentum. The Attack Titan is driven by an unyielding pursuit of freedom — a quality that has manifested in every one of its inheritors across the ages. Its unique ability allows it to see the memories of its future inheritors, creating a chain of cause and effect that spans generations. It has always fought for freedom, and it always will.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 15m · <strong>Abilities:</strong> Future memory transmission, hand-to-hand combat mastery · <strong>Notable Inheritors:</strong> Eren Jaeger, Grisha Jaeger, Eren Kruger</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">超大型</span></div>
+        <div class="titan-feature__info">
+          <h2>The Colossal Titan</h2>
+          <div class="titan-feature__jp">超大型巨人</div>
+          <p class="titan-feature__desc">Towering at 60 meters — the largest of all Titan Shifters. The Colossal Titan's transformation unleashes a cataclysmic blast of steam and light that can level entire city blocks. Its immense size makes it the ultimate siege weapon, capable of breaching walls that have stood for a century. Its steam emission can scald approaching enemies and obscure vision, making close-quarters approach nearly impossible.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 60m · <strong>Abilities:</strong> Cataclysmic transformation blast, steam emission, immense physical strength · <strong>Notable Inheritors:</strong> Bertholdt Hoover, Armin Arlert</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">鎧</span></div>
+        <div class="titan-feature__info">
+          <h2>The Armored Titan</h2>
+          <div class="titan-feature__jp">鎧の巨人</div>
+          <p class="titan-feature__desc">Covered in near-impenetrable armor plating, the Armored Titan is a living battering ram. Its armored fists can shatter stone and steel, and its hardened body can withstand cannon fire and blade strikes alike. It was the Armored Titan that breached Wall Maria, beginning humanity's darkest era. Its user can selectively shed or reinforce armor, trading speed for defense in a constant battlefield calculation.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 15m · <strong>Abilities:</strong> Full-body armor hardening, armored charge attack, selective armor shedding · <strong>Notable Inheritors:</strong> Reiner Braun</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">女型</span></div>
+        <div class="titan-feature__info">
+          <h2>The Female Titan</h2>
+          <div class="titan-feature__jp">女型の巨人</div>
+          <p class="titan-feature__desc">A highly agile and versatile Titan optimized for adaptability. The Female Titan can harden specific parts of its body into crystalline armor — creating blades, shields, or defensive cocoons. Its piercing scream can summon nearby Pure Titans, making it a battlefield commander. Its intelligence and combat adaptability make it one of the deadliest of the Nine in one-on-one combat.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 14m · <strong>Abilities:</strong> Selective hardening, Titan-summoning scream, crystalline self-defense · <strong>Notable Inheritors:</strong> Annie Leonhart</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">獣</span></div>
+        <div class="titan-feature__info">
+          <h2>The Beast Titan</h2>
+          <div class="titan-feature__jp">獣の巨人</div>
+          <p class="titan-feature__desc">An ape-like Titan with extraordinary intelligence and a distinctive long-limbed physique. The Beast Titan's elongated arms allow it to hurl projectiles with devastating accuracy and force — turning debris into artillery. Its most terrifying ability is the power to control Pure Titans through its roar, commanding them as a general commands an army. Each inheritor's Beast Titan takes a unique animal-like form.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 17m · <strong>Abilities:</strong> Precise projectile throwing, Pure Titan control via roar, variable animal-like form · <strong>Notable Inheritors:</strong> Zeke Jaeger, Tom Xaver</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">顎</span></div>
+        <div class="titan-feature__info">
+          <h2>The Jaw Titan</h2>
+          <div class="titan-feature__jp">顎の巨人</div>
+          <p class="titan-feature__desc">Small, swift, and ferocious — the Jaw Titan trades size for unmatched speed and devastating bite force. Its razor-sharp teeth and claws can tear through even the hardest Titan armor, making it a natural predator of other Shifters. Its agility in close quarters is unparalleled, capable of scaling buildings and walls in seconds. A direct hit from its jaws can end any Titan in a single motion.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 5m · <strong>Abilities:</strong> Extreme agility, armor-piercing bite and claws, rapid wall-climbing · <strong>Notable Inheritors:</strong> Ymir (Subject of Ymir), Porco Galliard, Falco Grice</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">車力</span></div>
+        <div class="titan-feature__info">
+          <h2>The Cart Titan</h2>
+          <div class="titan-feature__jp">車力の巨人</div>
+          <p class="titan-feature__desc">A quadrupedal Titan built for endurance over burst combat. The Cart Titan can maintain its Titan form for extended periods — days or even weeks — far longer than any other Shifter. This makes it ideal for reconnaissance, artillery transport, and sustained military operations. Its back has been used as a mobile artillery platform, and its endurance allows it to outlast enemies in prolonged engagements.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 4m · <strong>Abilities:</strong> Extended Titan form duration (days/weeks), quadrupedal speed, artillery platform · <strong>Notable Inheritors:</strong> Pieck Finger</div>
+        </div>
+      </div>
+
+      <div class="titan-feature reveal">
+        <div class="titan-feature__art"><span style="font-family:var(--font-display);font-size:2rem;color:rgba(255,255,255,0.06);letter-spacing:4px">戦槌</span></div>
+        <div class="titan-feature__info">
+          <h2>The War Hammer Titan</h2>
+          <div class="titan-feature__jp">戦槌の巨人</div>
+          <p class="titan-feature__desc">One of the rarest and most feared of the Nine. The War Hammer Titan can conjure any weapon from hardened Titan flesh — spears, crossbows, blades, spikes, and its signature colossal war hammer. Unlike other Shifters, its user controls the Titan from a distance via a crystalized tether connected to the nape, making it nearly impossible to defeat in close combat. A Titan designed for war itself.</p>
+          <div class="titan-feature__stat"><strong>Height:</strong> 15m · <strong>Abilities:</strong> Weapon conjuration, remote operation via crystal tether, ranged attacks · <strong>Notable Inheritors:</strong> Lara Tybur, Eren Jaeger (temporary)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="padding-bottom:3rem">
+    <div class="container">
+      <div class="footer__text">
+        <strong>Attack on Titan (進撃の巨人)</strong> by Hajime Isayama · All rights reserved.
+      </div>
+      <div class="footer__links" style="margin-top:1rem">
+        <a href="../index.html" class="footer__link">Home</a>
+        <a href="chapters.html" class="footer__link">Chapters</a>
+        <a href="characters.html" class="footer__link">Characters</a>
+        <a href="timeline.html" class="footer__link">Timeline</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

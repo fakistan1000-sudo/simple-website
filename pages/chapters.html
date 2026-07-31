@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Story Arcs — Attack on Titan Chapter Archive | 進撃の巨人</title>
+  <meta name="description" content="Complete Attack on Titan chapter archive covering all 9 story arcs from The Fall of Shiganshina to The Rumbling. Every volume, every chapter, every turning point.">
+  <meta name="keywords" content="Attack on Titan chapters, Shingeki no Kyojin arcs, AOT manga, Hajime Isayama, Survey Corps, Titans, chapter list, manga volumes">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="All Story Arcs — Attack on Titan Chapter Archive">
+  <meta property="og:description" content="Complete Attack on Titan chapter archive covering all 9 story arcs from The Fall of Shiganshina to The Rumbling.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="進撃の巨人 — Attack on Titan Archive">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- JSON-LD Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Chapter Archive", "item": "https://example.com/pages/chapters.html" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Attack on Titan Archive",
+    "url": "https://example.com",
+    "description": "A comprehensive fan archive dedicated to Hajime Isayama's Attack on Titan manga."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* Page-specific overrides */
+    .page-hero {
+      height: 40vh;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--color-black) 0%, var(--color-military-1) 100%);
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: repeating-conic-gradient(rgba(139,0,0,0.03) 0.03%, transparent 0.04%) 50% 50% / 2px 2px;
+    }
+    .page-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--color-text);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .page-hero__sub {
+      font-family: var(--font-label);
+      font-size: 0.8rem;
+      color: var(--color-text-dim);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .arc-detail {
+      background: var(--color-ink);
+      border: 2px solid var(--color-military-3);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .arc-detail::after {
+      content: '';
+      position: absolute; inset: 8px;
+      border: 1px solid rgba(139,0,0,0.08);
+      pointer-events: none;
+    }
+    .arc-detail__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .arc-detail__number {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      color: var(--color-blood);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .arc-detail__title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--color-text);
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    .arc-detail__meta {
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      color: var(--color-text-dim);
+      letter-spacing: 2px;
+      text-align: right;
+    }
+    .arc-detail__chapters {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.3rem;
+      margin: 1rem 0;
+    }
+    .arc-detail__chapter {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      color: var(--color-text-dim);
+      letter-spacing: 1px;
+      padding: 0.3rem 0.5rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.03);
+      text-align: center;
+    }
+    .arc-detail__chapter:hover {
+      color: var(--color-brass);
+      border-color: var(--color-brass);
+    }
+    .arc-detail__desc {
+      font-size: 0.85rem;
+      color: var(--color-text-dim);
+      line-height: 1.7;
+    }
+    .arc-detail__key-events {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(139,0,0,0.1);
+    }
+    .arc-detail__key-events h4 {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      color: var(--color-blood);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .arc-detail__key-events ul {
+      list-style: none;
+      padding: 0;
+    }
+    .arc-detail__key-events li {
+      font-size: 0.8rem;
+      color: var(--color-text-dim);
+      padding: 0.25rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .arc-detail__key-events li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--color-brass);
+    }
+    .arc-detail[data-arc="1"] { border-left: 3px solid var(--color-blood); }
+    .arc-detail[data-arc="2"] { border-left: 3px solid var(--color-brass); }
+    .arc-detail[data-arc="3"] { border-left: 3px solid var(--color-green); }
+    .arc-detail[data-arc="4"] { border-left: 3px solid var(--color-text-dim); }
+    .arc-detail[data-arc="5"] { border-left: 3px solid var(--color-blood-bright); }
+    .arc-detail[data-arc="6"] { border-left: 3px solid var(--color-brass-light); }
+    .arc-detail[data-arc="7"] { border-left: 3px solid #5c7a52; }
+    .arc-detail[data-arc="8"] { border-left: 3px solid #6b5b8a; }
+    .arc-detail[data-arc="9"] { border-left: 3px solid var(--color-blood); }
+    @media (max-width: 768px) {
+      .arc-detail__header { flex-direction: column; }
+      .arc-detail__meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <nav class="nav" id="navbar" role="navigation" aria-label="Site navigation">
+    <div class="container">
+      <a href="../index.html">
+        <svg class="nav__emblem" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 8 L90 30 L90 70 L50 92 L10 70 L10 30 Z"/>
+          <path d="M50 22 L74 38 L74 62 L50 78 L26 62 L26 38 Z"/>
+          <line x1="50" y1="8" x2="50" y2="92"/>
+          <line x1="10" y1="30" x2="90" y2="30"/>
+          <line x1="10" y1="70" x2="90" y2="70"/>
+        </svg>
+      </a>
+      <ul class="nav__links">
+        <li><a href="../index.html" class="nav__link">Home</a></li>
+        <li><a href="chapters.html" class="nav__link nav__link--active">Chapters</a></li>
+        <li><a href="characters.html" class="nav__link">Characters</a></li>
+        <li><a href="titans.html" class="nav__link">Titans</a></li>
+        <li><a href="timeline.html" class="nav__link">Timeline</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div>
+      <h1 class="page-hero__title">Complete Chapter Archive</h1>
+      <div class="page-hero__sub">All 34 Volumes · 9 Story Arcs · The Complete Saga</div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section" style="padding-top:2rem">
+    <div class="container">
+      <p style="text-align:center;color:var(--color-text-dim);font-size:0.9rem;margin-bottom:3rem;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7">
+        From the breach of Wall Maria to the final pages of the Rumbling — every arc of Hajime Isayama's masterpiece, catalogued with chapter ranges, key events, and the moments that defined a generation.
+      </p>
+
+      <!-- Arc 1 -->
+      <div class="arc-detail reveal" data-arc="1">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc I · 845 C.E.</div>
+            <h2 class="arc-detail__title">The Fall of Shiganshina</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 1–2 · Ch. 1–12</div>
+        </div>
+        <p class="arc-detail__desc">The story begins. The Colossal Titan appears outside Wall Maria — a Titan so vast its face peers over the top of the wall. It kicks a breach into the gate, and Shiganshina District falls in hours. Eren Jaeger watches his mother Carla devoured as Hannes carries him to safety. Humanity loses one-third of its territory in a single day. The 104th Training Corps is born from the ashes.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 1</span><span class="arc-detail__chapter">Ch. 2</span><span class="arc-detail__chapter">Ch. 3</span>
+          <span class="arc-detail__chapter">Ch. 4</span><span class="arc-detail__chapter">Ch. 5</span><span class="arc-detail__chapter">Ch. 6</span>
+          <span class="arc-detail__chapter">Ch. 7</span><span class="arc-detail__chapter">Ch. 8</span><span class="arc-detail__chapter">Ch. 9</span>
+          <span class="arc-detail__chapter">Ch. 10</span><span class="arc-detail__chapter">Ch. 11</span><span class="arc-detail__chapter">Ch. 12</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>The Colossal and Armored Titans breach Wall Maria</li>
+            <li>Carla Jaeger's death — Eren's vow to exterminate every Titan</li>
+            <li>The evacuation of Shiganshina; the refugee crisis within Wall Rose</li>
+            <li>Eren, Mikasa, and Armin enlist in the 104th Training Corps</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 2 -->
+      <div class="arc-detail reveal" data-arc="2">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc II · 847 C.E.</div>
+            <h2 class="arc-detail__title">The 104th Training Corps</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 3–4 · Ch. 13–22</div>
+        </div>
+        <p class="arc-detail__desc">Three years after the fall. Eren, Mikasa, and Armin train alongside 218 other cadets under Commander Keith Shadis. Bonds are forged: the cold genius of Jean Kirstein, the devout faith of Krista Lenz, the stoic strength of Reiner Braun, the sharp instincts of Annie Leonhart. The class graduates, and the top ten enlist in the Survey Corps — the branch that fights Titans beyond the Walls.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 13</span><span class="arc-detail__chapter">Ch. 14</span><span class="arc-detail__chapter">Ch. 15</span>
+          <span class="arc-detail__chapter">Ch. 16</span><span class="arc-detail__chapter">Ch. 17</span><span class="arc-detail__chapter">Ch. 18</span>
+          <span class="arc-detail__chapter">Ch. 19</span><span class="arc-detail__chapter">Ch. 20</span><span class="arc-detail__chapter">Ch. 21</span>
+          <span class="arc-detail__chapter">Ch. 22</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>The cadets learn ODM gear — the art of three-dimensional maneuver</li>
+            <li>Jean Kirstein's internal conflict between safety (Military Police) and duty (Survey Corps)</li>
+            <li>Graduation: top 10 choose the Survey Corps</li>
+            <li>Eren's desperation — he must join the Survey Corps to fight Titans directly</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 3 -->
+      <div class="arc-detail reveal" data-arc="3">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc III · 847 C.E.</div>
+            <h2 class="arc-detail__title">The Battle of Trost</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 4–6 · Ch. 23–35</div>
+        </div>
+        <p class="arc-detail__desc">The Colossal Titan appears again — this time at Trost District, the gateway to Wall Rose. The Armored Titan breaches the gate. Hundreds are trapped inside, including the newly graduated cadets. In the chaos, Eren is devoured. But he emerges moments later as the Attack Titan — humanity's first weapon against the Titans. He lifts a massive boulder to seal the breach. The world changes forever.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 23</span><span class="arc-detail__chapter">Ch. 24</span><span class="arc-detail__chapter">Ch. 25</span>
+          <span class="arc-detail__chapter">Ch. 26</span><span class="arc-detail__chapter">Ch. 27</span><span class="arc-detail__chapter">Ch. 28</span>
+          <span class="arc-detail__chapter">Ch. 29</span><span class="arc-detail__chapter">Ch. 30</span><span class="arc-detail__chapter">Ch. 31</span>
+          <span class="arc-detail__chapter">Ch. 32</span><span class="arc-detail__chapter">Ch. 33</span><span class="arc-detail__chapter">Ch. 34</span>
+          <span class="arc-detail__chapter">Ch. 35</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>The Colossal Titan returns — the siege of Trost begins</li>
+            <li>Eren's first Titan transformation — he emerges from a Pure Titan's nape</li>
+            <li>The boulder sequence — Eren seals the breach, saving the district</li>
+            <li>Eren is placed under Survey Corps custody for investigation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 4 -->
+      <div class="arc-detail reveal" data-arc="4">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc IV · 848 C.E.</div>
+            <h2 class="arc-detail__title">The 57th Expedition — Female Titan</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 7–10 · Ch. 36–50</div>
+        </div>
+        <p class="arc-detail__desc">The Survey Corps launches the 57th Expedition beyond the Walls — a bait operation to capture the Titan that has been killing their squads. A mysterious Female Titan appears, capable of selectively hardening her skin and summoning Pure Titans with her scream. She pursues Eren relentlessly. The operation becomes a slaughter. Only Levi's intervention prevents total annihilation.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 36</span><span class="arc-detail__chapter">Ch. 37</span><span class="arc-detail__chapter">Ch. 38</span>
+          <span class="arc-detail__chapter">Ch. 39</span><span class="arc-detail__chapter">Ch. 40</span><span class="arc-detail__chapter">Ch. 41</span>
+          <span class="arc-detail__chapter">Ch. 42</span><span class="arc-detail__chapter">Ch. 43</span><span class="arc-detail__chapter">Ch. 44</span>
+          <span class="arc-detail__chapter">Ch. 45</span><span class="arc-detail__chapter">Ch. 46</span><span class="arc-detail__chapter">Ch. 47</span>
+          <span class="arc-detail__chapter">Ch. 48</span><span class="arc-detail__chapter">Ch. 49</span><span class="arc-detail__chapter">Ch. 50</span>
+        </div>
+        <div class="arch-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>The Female Titan decimates Levi's squad — the first major loss</li>
+            <li>Eren learns to control his Titan form through training</li>
+            <li>The Survey Corps captures the Female Titan — revealed as Annie Leonhart</li>
+            <li>Annie crystallizes herself inside a Titan crystal — trapped for years</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 5 -->
+      <div class="arc-detail reveal" data-arc="5">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc V · 849 C.E.</div>
+            <h2 class="arc-detail__title">Clash of the Titans</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 10–13 · Ch. 51–72</div>
+        </div>
+        <p class="arc-detail__desc">The Survey Corps fortifies Wall Rose, knowing the Titans are inside. But nothing prepares them for the truth. In a moment of fragile stillness atop a wall, Reiner Braun turns to Eren and confesses: "I am the Armored Titan. He is the Colossal." Bertholdt Hoover stands beside him. Identity shatters. War begins within humanity. The battle that follows — in the trees, on the walls, in the sky — costs everything.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 51</span><span class="arc-detail__chapter">Ch. 52</span><span class="arc-detail__chapter">Ch. 53</span>
+          <span class="arc-detail__chapter">Ch. 54</span><span class="arc-detail__chapter">Ch. 55</span><span class="arc-detail__chapter">Ch. 56</span>
+          <span class="arc-detail__chapter">Ch. 57</span><span class="arc-detail__chapter">Ch. 58</span><span class="arc-detail__chapter">Ch. 59</span>
+          <span class="arc-detail__chapter">Ch. 60</span><span class="arc-detail__chapter">Ch. 61</span><span class="arc-detail__chapter">Ch. 62</span>
+          <span class="arc-detail__chapter">Ch. 63</span><span class="arc-detail__chapter">Ch. 64</span><span class="arc-detail__chapter">Ch. 65</span>
+          <span class="arc-detail__chapter">Ch. 66</span><span class="arc-detail__chapter">Ch. 67</span><span class="arc-detail__chapter">Ch. 68</span>
+          <span class="arc-detail__chapter">Ch. 69</span><span class="arc-detail__chapter">Ch. 70</span><span class="arc-detail__chapter">Ch. 71</span>
+          <span class="arc-detail__chapter">Ch. 72</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>Reiner's confession on top of Wall Rose — one of manga's most iconic moments</li>
+            <li>The battle in the trees — Eren vs. Reiner and Bertholdt</li>
+            <li>Ymir reveals her Titan powers — she carries Historia forward</li>
+            <li>Erwin's gambit: capture the Colossal, lose everything</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 6 -->
+      <div class="arc-detail reveal" data-arc="6">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc VI · 849 C.E.</div>
+            <h2 class="arc-detail__title">The Uprising</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 13–18 · Ch. 73–108</div>
+        </div>
+        <p class="arc-detail__desc">The story pivots. The true enemy is not beyond the Walls — it is within. The Interior Police under First King Kenney Ackerman move against the Survey Corps. The monarchy's secrets unravel. Historia Reiss is revealed as the true heir to the throne. In the caverns beneath the Reiss chapel, Eren and Historia confront her father — and the truth of the Founding Titan's power. The Walls were never a prison. They were a tomb.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 73</span><span class="arc-detail__chapter">Ch. 74</span><span class="arc-detail__chapter">Ch. 75</span>
+          <span class="arc-detail__chapter">Ch. 76</span><span class="arc-detail__chapter">Ch. 77</span><span class="arc-detail__chapter">Ch. 78</span>
+          <span class="arc-detail__chapter">Ch. 79</span><span class="arc-detail__chapter">Ch. 80</span><span class="arc-detail__chapter">Ch. 81</span>
+          <span class="arc-detail__chapter">Ch. 82</span><span class="arc-detail__chapter">Ch. 83</span><span class="arc-detail__chapter">Ch. 84</span>
+          <span class="arc-detail__chapter">Ch. 85</span><span class="arc-detail__chapter">Ch. 86</span><span class="arc-detail__chapter">Ch. 87</span>
+          <span class="arc-detail__chapter">Ch. 88</span><span class="arc-detail__chapter">Ch. 89</span><span class="arc-detail__chapter">Ch. 90</span>
+          <span class="arc-detail__chapter">Ch. 91</span><span class="arc-detail__chapter">Ch. 92</span><span class="arc-detail__chapter">Ch. 93</span>
+          <span class="arc-detail__chapter">Ch. 94</span><span class="arc-detail__chapter">Ch. 95</span><span class="arc-detail__chapter">Ch. 96</span>
+          <span class="arc-detail__chapter">Ch. 97</span><span class="arc-detail__chapter">Ch. 98</span><span class="arc-detail__chapter">Ch. 99</span>
+          <span class="arc-detail__chapter">Ch. 100</span><span class="arc-detail__chapter">Ch. 101</span><span class="arc-detail__chapter">Ch. 102</span>
+          <span class="arc-detail__chapter">Ch. 103</span><span class="arc-detail__chapter">Ch. 104</span><span class="arc-detail__chapter">Ch. 105</span>
+          <span class="arc-detail__chapter">Ch. 106</span><span class="arc-detail__chapter">Ch. 107</span><span class="arc-detail__chapter">Ch. 108</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>The Survey Corps framed for treason — Erwin's arrest and gambit</li>
+            <li>Kenney Ackerman revealed — the First King's true nature</li>
+            <li>Historia refuses her father's plan — she chooses to live for herself</li>
+            <li>Eren consumes the Founding Titan's spinal fluid — the power of the Coordinate awakens</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 7 -->
+      <div class="arc-detail reveal" data-arc="7">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc VII · 850 C.E.</div>
+            <h2 class="arc-detail__title">Return to Shiganshina</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 18–22 · Ch. 109–138</div>
+        </div>
+        <p class="arc-detail__desc">The Survey Corps launches its most audacious mission — retake Wall Maria and reach the basement of Eren's old home. The answer to everything lies there. But Reiner and Bertholdt are waiting. The battle for Shiganshina is a slaughter. Erwin leads the final cavalry charge into the Beast Titan's rain of debris. Levi makes the choice. The basement reveals the truth: beyond the Walls, humanity is not extinct. The enemy is the world.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 109</span><span class="arc-detail__chapter">Ch. 110</span><span class="arc-detail__chapter">Ch. 111</span>
+          <span class="arc-detail__chapter">Ch. 112</span><span class="arc-detail__chapter">Ch. 113</span><span class="arc-detail__chapter">Ch. 114</span>
+          <span class="arc-detail__chapter">Ch. 115</span><span class="arc-detail__chapter">Ch. 116</span><span class="arc-detail__chapter">Ch. 117</span>
+          <span class="arc-detail__chapter">Ch. 118</span><span class="arc-detail__chapter">Ch. 119</span><span class="arc-detail__chapter">Ch. 120</span>
+          <span class="arc-detail__chapter">Ch. 121</span><span class="arc-detail__chapter">Ch. 122</span><span class="arc-detail__chapter">Ch. 123</span>
+          <span class="arc-detail__chapter">Ch. 124</span><span class="arc-detail__chapter">Ch. 125</span><span class="arc-detail__chapter">Ch. 126</span>
+          <span class="arc-detail__chapter">Ch. 127</span><span class="arc-detail__chapter">Ch. 128</span><span class="arc-detail__chapter">Ch. 129</span>
+          <span class="arc-detail__chapter">Ch. 130</span><span class="arc-detail__chapter">Ch. 131</span><span class="arc-detail__chapter">Ch. 132</span>
+          <span class="arc-detail__chapter">Ch. 133</span><span class="arc-detail__chapter">Ch. 134</span><span class="arc-detail__chapter">Ch. 135</span>
+          <span class="arc-detail__chapter">Ch. 136</span><span class="arc-detail__chapter">Ch. 137</span><span class="arc-detail__chapter">Ch. 138</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>The Beast Titan's barrage — Erwin's suicide charge to buy Levi an opening</li>
+            <li>Levi's choice: Erwin or Armin — who gets the Colossal Titan serum</li>
+            <li>The basement reveal: Grisha Jaeger's books show a world beyond the Walls</li>
+            <li>"The ocean" — Eren, Mikasa, and Armin finally reach the sea</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 8 -->
+      <div class="arc-detail reveal" data-arc="8">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc VIII · 854 C.E.</div>
+            <h2 class="arc-detail__title">The Marley Arc — Declaration of War</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 23–28 · Ch. 139–178</div>
+        </div>
+        <p class="arc-detail__desc">The story crosses the ocean. We meet the Warriors of Marley — Reiner's other world. The Mid-East Allied Forces war rages. Eren has infiltrated the enemy continent. In a crowded theater in Liberio, as Willy Tybur declares war on Paradis, Eren transforms and kills him on stage. The Survey Corps strikes from the sky. The world's war is now Paradis's war. Everything escalates.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 139</span><span class="arc-detail__chapter">Ch. 140</span><span class="arc-detail__chapter">Ch. 141</span>
+          <span class="arc-detail__chapter">Ch. 142</span><span class="arc-detail__chapter">Ch. 143</span><span class="arc-detail__chapter">Ch. 144</span>
+          <span class="arc-detail__chapter">Ch. 145</span><span class="arc-detail__chapter">Ch. 146</span><span class="arc-detail__chapter">Ch. 147</span>
+          <span class="arc-detail__chapter">Ch. 148</span><span class="arc-detail__chapter">Ch. 149</span><span class="arc-detail__chapter">Ch. 150</span>
+          <span class="arc-detail__chapter">Ch. 151</span><span class="arc-detail__chapter">Ch. 152</span><span class="arc-detail__chapter">Ch. 153</span>
+          <span class="arc-detail__chapter">Ch. 154</span><span class="arc-detail__chapter">Ch. 155</span><span class="arc-detail__chapter">Ch. 156</span>
+          <span class="arc-detail__chapter">Ch. 157</span><span class="arc-detail__chapter">Ch. 158</span><span class="arc-detail__chapter">Ch. 159</span>
+          <span class="arc-detail__chapter">Ch. 160</span><span class="arc-detail__chapter">Ch. 161</span><span class="arc-detail__chapter">Ch. 162</span>
+          <span class="arc-detail__chapter">Ch. 163</span><span class="arc-detail__chapter">Ch. 164</span><span class="arc-detail__chapter">Ch. 165</span>
+          <span class="arc-detail__chapter">Ch. 166</span><span class="arc-detail__chapter">Ch. 167</span><span class="arc-detail__chapter">Ch. 168</span>
+          <span class="arc-detail__chapter">Ch. 169</span><span class="arc-detail__chapter">Ch. 170</span><span class="arc-detail__chapter">Ch. 171</span>
+          <span class="arc-detail__chapter">Ch. 172</span><span class="arc-detail__chapter">Ch. 173</span><span class="arc-detail__chapter">Ch. 174</span>
+          <span class="arc-detail__chapter">Ch. 175</span><span class="arc-detail__chapter">Ch. 176</span><span class="arc-detail__chapter">Ch. 177</span>
+          <span class="arc-detail__chapter">Ch. 178</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>Reiner's backstory — the Warrior program, the burden of the Armored Titan</li>
+            <li>Willy Tybur's Declaration of War speech — "Paradis is our enemy"</li>
+            <li>Eren's attack in the Liberio theater — the War Hammer Titan revealed</li>
+            <li>The Survey Corps launches an all-out assault on Marleyan forces</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Arc 9 -->
+      <div class="arc-detail reveal" data-arc="9">
+        <div class="arc-detail__header">
+          <div>
+            <div class="arc-detail__number">Arc IX · 854 C.E.</div>
+            <h2 class="arc-detail__title">War for Paradis · The Rumbling</h2>
+          </div>
+          <div class="arc-detail__meta">Vol. 28–34 · Ch. 179–238</div>
+        </div>
+        <p class="arc-detail__desc">The final act. Eren unleashes the Rumbling — the Colossal Titans sealed within the Walls march across the ocean. The world unites against Paradis in a desperate last stand. Former enemies become allies. Mikasa, Armin, Levi, and the surviving scouts pursue Eren through Paths, through the Founding Titan's colossal form, and to the final moment that determines the fate of all Titankind. The story that began at the fall of Shiganshina ends with a choice made 2,000 years in the making.</p>
+        <div class="arc-detail__chapters">
+          <span class="arc-detail__chapter">Ch. 179</span><span class="arc-detail__chapter">Ch. 180</span><span class="arc-detail__chapter">Ch. 181</span>
+          <span class="arc-detail__chapter">Ch. 182</span><span class="arc-detail__chapter">Ch. 183</span><span class="arc-detail__chapter">Ch. 184</span>
+          <span class="arc-detail__chapter">Ch. 185</span><span class="arc-detail__chapter">Ch. 186</span><span class="arc-detail__chapter">Ch. 187</span>
+          <span class="arc-detail__chapter">Ch. 188</span><span class="arc-detail__chapter">Ch. 189</span><span class="arc-detail__chapter">Ch. 190</span>
+          <span class="arc-detail__chapter">Ch. 191</span><span class="arc-detail__chapter">Ch. 192</span><span class="arc-detail__chapter">Ch. 193</span>
+          <span class="arc-detail__chapter">Ch. 194</span><span class="arc-detail__chapter">Ch. 195</span><span class="arc-detail__chapter">Ch. 196</span>
+          <span class="arc-detail__chapter">Ch. 197</span><span class="arc-detail__chapter">Ch. 198</span><span class="arc-detail__chapter">Ch. 199</span>
+          <span class="arc-detail__chapter">Ch. 200</span><span class="arc-detail__chapter">Ch. 201</span><span class="arc-detail__chapter">Ch. 202</span>
+          <span class="arc-detail__chapter">Ch. 203</span><span class="arc-detail__chapter">Ch. 204</span><span class="arc-detail__chapter">Ch. 205</span>
+          <span class="arc-detail__chapter">Ch. 206</span><span class="arc-detail__chapter">Ch. 207</span><span class="arc-detail__chapter">Ch. 208</span>
+          <span class="arc-detail__chapter">Ch. 209</span><span class="arc-detail__chapter">Ch. 210</span><span class="arc-detail__chapter">Ch. 211</span>
+          <span class="arc-detail__chapter">Ch. 212</span><span class="arc-detail__chapter">Ch. 213</span><span class="arc-detail__chapter">Ch. 214</span>
+          <span class="arc-detail__chapter">Ch. 215</span><span class="arc-detail__chapter">Ch. 216</span><span class="arc-detail__chapter">Ch. 217</span>
+          <span class="arc-detail__chapter">Ch. 218</span><span class="arc-detail__chapter">Ch. 219</span><span class="arc-detail__chapter">Ch. 220</span>
+          <span class="arc-detail__chapter">Ch. 221</span><span class="arc-detail__chapter">Ch. 222</span><span class="arc-detail__chapter">Ch. 223</span>
+          <span class="arc-detail__chapter">Ch. 224</span><span class="arc-detail__chapter">Ch. 225</span><span class="arc-detail__chapter">Ch. 226</span>
+          <span class="arc-detail__chapter">Ch. 227</span><span class="arc-detail__chapter">Ch. 228</span><span class="arc-detail__chapter">Ch. 229</span>
+          <span class="arc-detail__chapter">Ch. 230</span><span class="arc-detail__chapter">Ch. 231</span><span class="arc-detail__chapter">Ch. 232</span>
+          <span class="arc-detail__chapter">Ch. 233</span><span class="arc-detail__chapter">Ch. 234</span><span class="arc-detail__chapter">Ch. 235</span>
+          <span class="arc-detail__chapter">Ch. 236</span><span class="arc-detail__chapter">Ch. 237</span><span class="arc-detail__chapter">Ch. 238</span>
+        </div>
+        <div class="arc-detail__key-events">
+          <h4>Key Events</h4>
+          <ul>
+            <li>The Rumbling begins — millions of Colossal Titans cross the ocean</li>
+            <li>The alliance forms — former enemies unite to stop Eren</li>
+            <li>Paths: Ymir Fritz chooses — the 2,000-year curse of the Titans ends</li>
+            <li>"See you later, Eren" — Mikasa's final goodbye</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="padding-bottom:3rem">
+    <div class="container">
+      <div class="footer__text">
+        <strong>Attack on Titan (進撃の巨人)</strong> by Hajime Isayama<br>
+        Kodansha · Bessatsu Shōnen Magazine · 2009–2021<br>
+        All rights belong to their respective owners.
+      </div>
+      <div class="footer__links" style="margin-top:1rem">
+        <a href="../index.html" class="footer__link">Home</a>
+        <a href="characters.html" class="footer__link">Characters</a>
+        <a href="titans.html" class="footer__link">Titans</a>
+        <a href="timeline.html" class="footer__link">Timeline</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
