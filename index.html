@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GameVerse</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#050816;
+color:white;
+overflow-x:hidden;
+
+}
+
+body::before{
+
+content:'';
+position:fixed;
+width:600px;
+height:600px;
+background:#4d4dff55;
+filter:blur(140px);
+top:-200px;
+left:-200px;
+z-index:-2;
+
+}
+
+body::after{
+
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#ff00ff22;
+filter:blur(150px);
+bottom:-180px;
+right:-150px;
+z-index:-2;
+
+}
+
+nav{
+
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,.1);
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+color:#7d7dff;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:40px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#7d7dff;
+
+}
+
+section{
+
+padding:120px 10%;
+min-height:100vh;
+
+}
+
+.hero{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+
+}
+
+.hero-text{
+
+width:50%;
+
+}
+
+.hero h1{
+
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+
+}
+
+.hero h1 span{
+
+color:#6d8dff;
+
+}
+
+.hero p{
+
+font-size:18px;
+color:#cfcfcf;
+line-height:1.8;
+margin-bottom:35px;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:15px 35px;
+background:linear-gradient(45deg,#6b63ff,#00bfff);
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+box-shadow:0 15px 30px #6b63ff66;
+
+}
+
+.hero-image{
+
+width:420px;
+height:420px;
+border-radius:50%;
+background:linear-gradient(45deg,#6b63ff,#00e5ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:180px;
+animation:float 4s ease-in-out infinite;
+box-shadow:0 0 80px #5b63ff88;
+
+}
+
+@keyframes float{
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+.title{
+
+text-align:center;
+font-size:45px;
+margin-bottom:70px;
+
+}
+
+.title span{
+
+color:#6b63ff;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+.card img{
+
+width:100%;
+border-radius:15px;
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:#bbb;
+line-height:1.7;
+
+}
+
+.tournament{
+
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+
+}
+
+.box{
+
+flex:1;
+background:rgba(255,255,255,.05);
+padding:40px;
+border-radius:20px;
+transition:.4s;
+
+}
+
+.box:hover{
+
+background:#6b63ff22;
+transform:scale(1.03);
+
+}
+
+.community{
+
+display:flex;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
+
+}
+
+.community img{
+
+width:450px;
+border-radius:25px;
+
+}
+
+.contact{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:50px;
+
+}
+
+input,textarea{
+
+width:100%;
+padding:18px;
+margin-bottom:20px;
+border:none;
+outline:none;
+background:#111a2c;
+color:white;
+border-radius:10px;
+
+}
+
+textarea{
+
+height:150px;
+
+}
+
+footer{
+
+padding:40px;
+text-align:center;
+background:#050816;
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.reveal{
+
+opacity:0;
+transform:translateY(80px);
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+}
+
+.hero-text{
+
+width:100%;
+
+}
+
+.hero-image{
+
+width:300px;
+height:300px;
+font-size:120px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">GameVerse</div>
+
+<ul>
+
+<li><a href="#hero">Home</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#tournaments">Events</a></li>
+<li><a href="#community">Community</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="hero">
+
+<div class="hero-text">
+
+<h1>Play Beyond <span>Reality</span></h1>
+
+<p>
+Discover the latest AAA games, compete in online tournaments,
+connect with gamers worldwide, and become part of the ultimate gaming universe.
+</p>
+
+<a href="#" class="btn">Explore Games</a>
+
+</div>
+
+<div class="hero-image">
+
+🎮
+
+</div>
+
+</section>
+
+<section id="games" class="reveal">
+
+<h2 class="title">Featured <span>Games</span></h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=1">
+
+<h3>Cyber Strike</h3>
+
+<p>Fast-paced futuristic FPS with realistic graphics and online multiplayer battles.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=2">
+
+<h3>Fantasy World</h3>
+
+<p>Explore magical kingdoms filled with dragons, dungeons and legendary quests.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=3">
+
+<h3>Speed Legends</h3>
+
+<p>Experience high-speed racing with stunning cars and realistic environments.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="tournaments" class="reveal">
+
+<h2 class="title">Gaming <span>Tournaments</span></h2>
+
+<div class="tournament">
+
+<div class="box">
+
+<h2>$100,000 Championship</h2>
+
+<p>Join the world's biggest esports competition and compete against elite players.</p>
+
+</div>
+
+<div class="box">
+
+<h2>Weekly Challenges</h2>
+
+<p>Complete missions every week and unlock exclusive skins and rewards.</p>
+
+</div>
+
+<div class="box">
+
+<h2>Live Events</h2>
+
+<p>Participate in community streams, giveaways and online competitions.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="community" class="reveal">
+
+<h2 class="title">Join Our <span>Community</span></h2>
+
+<div class="community">
+
+<img src="https://picsum.photos/500/400?random=4">
+
+<div>
+
+<h2>More Than 2 Million Players</h2>
+
+<br>
+
+<p>
+
+Meet teammates, join guilds, chat with friends, share achievements,
+watch live streams, and build your gaming reputation.
+
+</p>
+
+<br>
+
+<a href="#" class="btn">Join Now</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="reveal">
+
+<h2 class="title">Get In <span>Touch</span></h2>
+
+<div class="contact">
+
+<div>
+
+<h2>Contact Us</h2>
+
+<br>
+
+<p>Email : support@gameverse.com</p>
+
+<br>
+
+<p>Discord : GameVerse Official</p>
+
+<br>
+
+<p>Instagram : @gameverse</p>
+
+</div>
+
+<div>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<a href="#" class="btn">Send Message</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 GameVerse | Designed with HTML & CSS
+
+</footer>
+
+<script>
+
+const reveals=document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll",()=>{
+
+reveals.forEach(section=>{
+
+const top=section.getBoundingClientRect().top;
+
+const windowHeight=window.innerHeight;
+
+if(top<windowHeight-120){
+
+section.classList.add("active");
+
+}
+
+})
+
+})
+
+</script>
+
+</body>
+</html>
